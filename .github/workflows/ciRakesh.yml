@@ -13,7 +13,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3 # setup the node with version of 16
         with:
-          node-version: '16' 
+          node-version: '20' 
       - name: Install dependencies # install all the dependencies from package.json file
         run: npm install
       - name: Run tests # run all the test files
