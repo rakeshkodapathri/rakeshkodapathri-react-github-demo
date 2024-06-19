@@ -9,7 +9,7 @@ jobs:
     runs-on: macos-latest # build on MacOS as i don't have ubuntu on my mac machine
     steps:
       - name: Check out the repository
-        uses: actions/checkout@v2 # checkout the repository for the code
+        uses: actions/checkout@v3 # checkout the repository for the code
       - name: Set up Node.js
         uses: actions/setup-node@v3 # setup the node with version of 16
         with:
