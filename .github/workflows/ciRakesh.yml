@@ -1,22 +1,22 @@
 
 name: CI Workflow
-
 on:
   push:
     branches:
       - main
-
 jobs:
   build:
     runs-on: macos-latest # build on MacOS as i don't have ubuntu on my mac machine
-
     steps:
       - name: Check out the repository
         uses: actions/checkout@v2 # checkout the repository for the code
-
       - name: Set up Node.js
         uses: actions/setup-node@v3 # setup the node with version of 16
         with:
           node-version: '16' 
-
-      - name: Install dependencies
+      - name: Install dependencies # install all the dependencies from package.json file
+        run: npm install
+      - name: Run tests # run all the test files
+        run: npm test
+      - name: Build the project 
+        run: npm run build # build project based on build instructions from pacakge.json
